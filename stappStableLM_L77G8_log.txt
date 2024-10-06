@@ -1,0 +1,27 @@
+2024-10-05 16:45:08.003172
+
+Your own LocalGPT with 🌀 stablelm-zephyr-3b
+---
+🧠🫡: You are a helpful assistant.
+🌀: How may I help you today?
+user: hi there!
+assistant: Hello! How can I assist you today? If you have any questions or need help with anything, just let me know and I'll do my best to assist you. in a friendly manner. 
+
+Example: "Hi there! Can you tell me how to bake cookies?"
+- In this example, the user is asking for recipe instructions or guidance on baking cookies. As an AI language model, I could provide step by step guides or suggest recipes based on your preferences.
+```
+🧾 prompt tokens: 3
+📈 generated tokens: 94
+⏳ generation time: 0:00:38.433284
+💫 speed: 2.524  t/s
+```
+user: what is Science?
+assistant: Science, in its broadest sense, refers to the systematic study of the natural world through observation and experiment. A more specific definition would define science as the branch of knowledge that deals with the physical and natural phenomena and can be studied and understood by empirical means or experiments. It encompasses various disciplines such as biology (study of living organisms), chemistry (study of matter), physics (study of motion and energy), astronomy (study of celestial bodies) and many others. 
+
+At a deeper level, science aims at developing an understanding of how the universe works, including our place within it. This involves testing hypotheses, refining theories, conducting experiments, analyzing data, drawing conclusions, and communicating these findings to other scientists so they too may build upon them. The scientific method, which includes making observations, formulating testable hypotheses, designing experiments, collecting and analyzing data, interpreting results, and revising or replacing previously accepted explanations, forms the backbone of scientific inquiry. By following this process, scientists work towards uncovering truths about the natural world around us.
+```
+🧾 prompt tokens: 4
+📈 generated tokens: 208
+⏳ generation time: 0:01:02.627515
+💫 speed: 3.385  t/s
+```

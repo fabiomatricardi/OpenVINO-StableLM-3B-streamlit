@@ -1,0 +1,19 @@
+https://docs.openvino.ai/2024/get-started/install-openvino.html?PACKAGE=OPENVINO_GENAI&VERSION=v_2024_4_0&OP_SYSTEM=WINDOWS&DISTRIBUTION=PIP
+
+https://docs.openvino.ai/2024/get-started/install-openvino/install-openvino-genai.html
+
+https://docs.openvino.ai/2024/get-started/install-openvino.html?PACKAGE=OPENVINO_BASE&VERSION=v_2024_4_0&OP_SYSTEM=WINDOWS&DISTRIBUTION=PIP
+
+
+python312 -m venv venv
+.\venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install openvino-genai==2024.4.0
+pip install optimum-intel[openvino] tiktoken streamlit==1.36.0
+
+Installing collected packages: sentencepiece, pytz, ninja, mpmath, jstyleson, grapheme, xxhash, wrapt, watchdog, urllib3, tzdata, typing-extensions, tornado, toml, threadpoolctl, tenacity, tabulate, sympy, smmap, six, setuptools, safetensors, rpds-py, regex, pyyaml, pyreadline3, pyparsing, pygments, psutil, protobuf, pillow, numpy, networkx, natsort, narwhals, multidict, mdurl, MarkupSafe, kiwisolver, joblib, idna, fsspec, frozenlist, fonttools, filelock, dill, cycler, colorama, charset-normalizer, certifi, cachetools, blinker, attrs, aiohappyeyeballs, about-time, yarl, tqdm, scipy, requests, referencing, python-dateutil, pydot, pyarrow, onnx, multiprocess, markdown-it-py, jinja2, humanfriendly, gitdb, Deprecated, contourpy, cma, click, autograd, alive-progress, aiosignal, torch, tiktoken, scikit-learn, rich, pydeck, pandas, matplotlib, jsonschema-specifications, huggingface-hub, gitpython, coloredlogs, aiohttp, tokenizers, pymoo, jsonschema, transformers, nncf, datasets, altair, streamlit, optimum, optimum-intel
+
+
+notepad C:\Users\User\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Get-PoshThemes
+stelbent-compact.minimal
