@@ -16,8 +16,8 @@ import tiktoken
 encoding = tiktoken.get_encoding("cl100k_base") 
 
 verbosity = False
-nCTX = 8192
-sTOPS = ['<eos>']
+nCTX = 4096
+sTOPS = ['<|endoftext|>']
 modelname = "stablelm-zephyr-3b"
 model_id = 'stablelm-zephyr-3b-openvino-4bit' #from my HF repo https://huggingface.co/FM-1976/stablelm-zephyr-3b-openvino-4bit
 
@@ -181,7 +181,11 @@ if myprompt := st.chat_input("What is an AI model?"):
             t1.start()
             start = datetime.datetime.now()
             partial_text = ""
+            firstToken = 0
             for chunk in streamer:
+                if firstToken == 0:
+                    ttft = datetime.datetime.now() -start
+                    firstToken = 1
                 full_response += chunk
                 message_placeholder.markdown(full_response + "🟡")
                 delta = datetime.datetime.now() -start    
@@ -191,9 +195,10 @@ if myprompt := st.chat_input("What is an AI model?"):
                 totaltokens = prompttokens + assistanttokens  
                 st.session_state.speed = totaltokens/totalseconds 
                 statspeed.markdown(f'💫 speed: {st.session_state.speed:.2f}  t/s')                          
-
+        # The generation is completed - we prepare the final render and log
             delta = datetime.datetime.now() - start
             totalseconds = delta.total_seconds()
+            ttfseconds = ttft.total_seconds()
             prompttokens = len(encoding.encode(myprompt))
             assistanttokens = len(encoding.encode(full_response))
             totaltokens = prompttokens + assistanttokens
@@ -205,6 +210,7 @@ if myprompt := st.chat_input("What is an AI model?"):
 📈 generated tokens: {assistanttokens}
 ⏳ generation time: {delta}
 💫 speed: {st.session_state.speed:.3f}  t/s
+🚀 time to first token: {ttfseconds:.2f} seconds
 ```"""    
             message_placeholder.markdown(toregister)
             asstext = f"assistant: {toregister}"
